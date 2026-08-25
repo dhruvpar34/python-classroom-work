@@ -18,6 +18,9 @@ ch = int (input("choice the category from the given option above :"))
 print("="*50)
 if (ch==1):
     name = input ("Enter your name :")
+    if not name.replace(" ", "").isalpha():
+        print("[ERROR] Name should contain only alphabets.")
+        exit()
     age = int(input("Enter your age :"))
     if (age<0 or age>100):
         print("[ERROR] Age must be between 0 and 100.")
