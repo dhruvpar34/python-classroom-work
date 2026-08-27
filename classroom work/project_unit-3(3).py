@@ -105,3 +105,43 @@
 
 # print("Reversed sentence:", " ".join(reversed_words))
 
+# 10. Write a Python program to remove duplicate characters from a string.
+
+# a = input("enter the string")
+# b = ""
+# for i in a:
+#     if i not in b:
+#         b += i
+# print ("after the removing the duplicate letter",b) 
+
+# 11. Write a Python program to find the longest word in a sentence.
+
+# a = input("enter the sentence")
+
+# word = a.split()
+
+# longest_words = word[0]
+
+# for i in word:
+#     if len(i)>len(longest_words):
+#         longest_words = i
+# print (longest_words)
+
+# 12. Write a Python program that performs the following operations on a given string:
+# * Convert to uppercase * Convert to lowercase * Swap case
+# * Remove leading/trailing spaces * Replace one word with another
+# * Split into words * Join the words using a hyphen (`-`)
+
+# a = input ("enter the string")
+
+# b = a.upper()
+# c = a.lower()
+# d = a.replace(" ","")
+# e = a.split()
+# f = a.replace(" ","-")
+
+# print(b)
+# print(c)
+# print(d)
+# print(e)
+# print(f)
