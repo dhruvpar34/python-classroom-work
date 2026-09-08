@@ -122,3 +122,174 @@
 
 # 12.Write a function print_table(n) that prints the multiplication table of n.
 
+# a = int(input("enter the number :"))
+
+# def print_table(n):
+#     for i in range (11):
+#         print (n,"X",i,"=",i*n)
+
+# print_table(a)
+
+# 13.Write a function sum_of_digits(n) that returns the sum of digits of a number.
+
+# def sum_of_digits(n):
+#     b = 0
+#     while n > 0 :
+#         a = n%10
+#         b = b + a
+#         n = n // 10
+#     return b   
+
+# num = int (input ("enter the number for the sum of digits :"))
+# print(sum_of_digits(num))
+
+# 14.Write a function count_numbers(numbers) that accepts a list and returns the number
+# of: Positive numbers, Negative numbers, Zeros
+
+
+# a = []
+# for i in range(0,3):
+#     b = int(input("enter the list number :"))
+#     a.append(b)
+
+
+# def count_numbers(num):
+#     a = 0 
+#     b = 0 
+#     c = 0 
+#     for i in num:
+#         if i > 0:
+#             a += 1
+#         elif i < 0 :
+#             b +=0   
+#         elif i == 0 :
+#             c +=0
+#     return a , b , c
+
+
+# print("positive number , negative number, zero number = ",count_numbers(a))
+
+# 15.Write a function get_grade(marks) that returns the grade according to:
+# 90–100 → A, 80–89 → B, 70–79 → C, 60–69 → D, Below 60 → F
+
+# marks = int(input("enter the marks :")) 
+
+# def get_grade(marks):
+#     if marks >= 90 and marks <=100:
+#         print("A")
+#     elif marks >= 80 and marks < 100 :
+#         print("B")
+#     elif marks >= 70 and marks < 100:
+#         print("C")
+#     elif marks >=60 and marks <100:
+#         print ("D")
+#     elif marks >100 :
+#         print("ERROR, the given marks are greater than")
+#     else:
+#         print("F")
+
+# get_grade(marks)
+
+# 16. Student Marks Program: Create a program using separate functions: input_marks(),
+# calculate_total(), calculate_average(), display_result()
+# Program should accept marks of 5 subjects & display total, average and result.
+
+
+# def input_marks():
+#     a = []
+#     for i in range (6):
+#         marks = int(input("enter the marks of the subject (marks should be less than 100)"))
+        
+#         while marks < 0 or marks > 100:
+#             print("Invalid marks! Enter marks between 0 and 100.")
+#             marks = int(input("Enter the marks again: "))
+
+#         a.append(marks)
+#     display_result(a)
+    
+# def calculate_average(a):
+#     av = 0 
+#     for i in a:
+#         av += i
+#         c = av/ len(a)
+#     return c
+    
+# def calculate_total(a):
+#     t = 0 
+#     for i in a:
+#         t += i 
+#     return t
+    
+# def display_result(a):
+#     print ("average of the marks = ",calculate_average(a))
+#     print("total marks = ",calculate_total(a))
+    
+#     if calculate_total(a) >333 :
+#         print ("Result = pass")
+#     else:
+#         print ("Result = Fail")
+
+
+# input_marks()
+
+# 17. Simple Calculator: Organise a calculator program using separate functions: add(),
+# subtract(), multiply(), divide()
+# The main program should ask the user for two numbers and an operation.
+
+# a = int (input("enter the number 1 :"))
+# b = int (input("enter the number 2 :"))
+
+# print ("1.addition")
+# print ("2.subtract")
+# print ("3.multiplication")
+# print ("4.division")
+
+# ch = int (input("enter the choice :"))
+
+# def add(a,b):
+#     return a+b
+# def subtract(a,b):
+#     return a -b 
+# def multiply(a,b):
+#     return a*b
+# def divide(a,b):
+#     return a/b
+
+# if ch == 1:
+#     print("addition of two number is :",add(a,b))
+# elif ch == 2:
+#     print("subtraction of two number is :",subtract(a,b))
+# elif ch == 3 :
+#     print ("multiplication of two number is :",multiply(a,b))
+# elif ch == 4 :
+#     print ("a divides b :",divide(a,b))
+# else:
+#     print("Error , invalid choice")
+
+# Q-18. etricity Bill: Create a program using functions: get_units(), calculate_bill(),
+# display_bill()
+# Calculate electricity bill based on units consumed.
+
+# def electricity_bill():
+#     unit = int (input("enter the unit of used electricity :"))
+#     return unit
+
+
+# def calculate_bill(unit):
+#     if units <= 100:
+#         bill = units * 5
+#     elif units <= 200:
+#         bill = (100 * 5) + (units - 100) * 7
+#     elif units <= 300:
+#         bill = (100 * 5) + (100 * 7) + (units - 200) * 10
+#     else:
+#         bill = (100 * 5) + (100 * 7) + (100 * 10) + (units - 300) * 12
+#     return bill
+# def display_bill(bill,unit):
+#     print("The total unit used is :",unit)
+#     print("The total fee of the bill is :",bill)
+
+
+# units = get_units()
+# bill = calculate_bill(units)
+# display_bill(units, bill)
