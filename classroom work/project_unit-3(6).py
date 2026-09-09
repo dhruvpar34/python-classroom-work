@@ -293,3 +293,169 @@
 # units = get_units()
 # bill = calculate_bill(units)
 # display_bill(units, bill)
+
+# 19. Shopping Bill: Create separate functions: input_items(), calculate_total(),
+# calculate_discount(), generate_bill()
+# The program should accept item prices and quantities and finally display the bill.
+
+# a = []
+
+# num = int(input("enter the number of item you want to enter :"))
+
+# def input_items():    
+#     for i in range(num):
+#         name = input ("enter the item name :")
+#         value = int(input("enter the value :"))
+#         quantity = int (input("enter the quantity :"))
+
+#         a.append([name,value,quantity])
+
+#     return a 
+
+# def calculate_total(a):
+    
+#     t = 0 
+#     for i in a:
+#         t += i[1]*i[2]
+#     return t 
+
+# def calculate_discount(t):
+#     if t >= 5000:
+#         discount = total * 0.20
+#     elif t >= 2000:
+#         discount = total * 0.10
+#     elif t >= 1000:
+#         discount = total * 0.05
+#     else:
+#         discount = 0
+
+#     return discount
+
+
+# def generate_bill(a, t, discount):
+#     print("\n========== SHOPPING BILL ==========")
+
+#     for i in a: 
+#         print(i[0],":",i[1],"*",i[2],"=",i[1]*i[2])
+
+
+#     final_amount = t - discount
+
+#     print("-----------------------------------")
+#     print("Total Amount : ₹",t)
+#     print(f"Discount     : ₹",discount)
+#     print(f"Final Amount : ₹",final_amount)
+#     print("===================================")
+    
+# a = input_items()
+# t = calculate_total(a)
+# discount = calculate_discount(t)
+# generate_bill(a,t,discount)
+
+# 20. Number Analysis Program: Create a program using separate functions:
+# input_number(), check_even_odd(), check_prime(), find_factorial(),
+# display_result()
+# The program should accept a number and display all the required results.
+
+# def input_number():
+#     a = int (input("enter the number :"))
+#     return a 
+
+# def check_even_odd(a):
+#     if a%2 == 0 :
+#         ch = 1
+#     else :
+#         ch = 0
+#     return ch
+
+# def check_prime(a):
+#      p = 1
+#      if a <= 1:
+#         p=0
+#         return p
+#      for i in range(2,a):
+#         if a % i == 0:
+#             p=0
+#             return p
+
+#      return p
+    
+# def find_factorial(a):
+#     if a == 0 or a == 1:
+#         return 1 
+#     else:
+#         f = a*find_factorial(a-1)
+#         return f
+
+# def display_result(a,ch,p,f):
+#     if ch == 1:
+#         print("The number is Even")
+#     else:
+#         print ("The number is odd")
+#     if p == 0:
+#         print("The number is Not prime number")
+#     else:
+#         print ("The number is prime number")
+#     print ("The factorial of the number is :",f)
+
+
+# a = input_number()
+# ch = check_even_odd(a)
+# p = check_prime(a)
+# f = find_factorial(a)
+# display_result(a,ch,p,f)
+
+# 21. Convert this program into functions
+# Given: name = input("Enter name: ")
+# marks = []
+# for i in range(5):
+# marks.append(int(input("Enter marks: ")))
+# total = sum(marks)
+# average = total / 5
+# if average >= 40:
+# result = "Pass"
+# else:
+# result = "Fail"
+# print("Name:", name)
+# print("Total:", total)
+# print("Average:", average)
+# print("Result:", result)
+# Task: Divide this program into at least 4 meaningful functions.
+
+# marks = []
+
+# def name():
+#     name = input("enter the name :")
+#     return name 
+
+# def input_marks():
+#     for i in range(1,6):
+#         m = int(input("enter the marks of 5 subject :"))
+#         if m > 100 or m < 0 :
+#             print ("Invalid input, the marks should be less than 100 and greater than 0 ")
+#             m = int(input("enter the marks of 5 subject :"))
+#         marks.append(m)
+#     return marks
+
+# def total(marks):
+#     total = sum(marks)
+#     return total
+
+# def average(total):
+#     average = total / 5
+#     return average
+
+# def result(name,marks,total,average):
+#     print("-"*60)
+#     print("The Name is :",name)
+#     print("-"*60)
+#     print ("The marks are :",marks)
+#     print ("The total are ",total)
+#     print ("The average is :",average)
+#     print("-"*60)
+
+# name = name()
+# marks = input_marks()
+# total = total(marks)
+# average = average(total)
+# result (name,marks,total,average)
