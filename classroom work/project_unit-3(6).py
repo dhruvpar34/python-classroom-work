@@ -459,3 +459,190 @@
 # total = total(marks)
 # average = average(total)
 # result (name,marks,total,average)
+
+# 22. Find the problem
+# Consider:
+# def calculate(a, b):
+# print(a + b)
+# result = calculate(10, 20)
+# print(result)
+# What will be the output? Why doesn't result contain 30?
+
+# def calcuate(a,b):
+#     print(a+b)
+
+# result = calcuate(10,20)
+
+# print(result)
+
+# #output
+# # 30
+# # none
+# # result doesn't contain 30 because the return is not set . so , the deafault value of the return that is none will be given to the result.
+
+# 23. Function Calling Function
+# Create the following functions:
+# get_number()
+# square()
+# cube()
+# display()
+# get_number() should provide a number to square() and cube(), and display() should display the results.
+
+# def get_number():
+#     num = int (input("enter the number :"))
+#     return num
+# def square(num):
+#     square = num*num
+#     return square
+# def cube (num):
+#     cube = num*num*num
+#     return cube
+# def display(num, square, cube):
+#     print("-"*60)
+#     print("The number is :", num)
+#     print("The square of the number is :",square)
+#     print("The cube of the number is :",cube)
+#     print("-"*60)
+
+# num = get_number()
+# square = square(num)
+# cube = cube(num)
+# display(num , square , cube)
+
+# 24. Menu-Driven Program
+# Create a menu-driven program using functions:
+# 1. Check Even/Odd
+# 2. Check Prime
+# 3. Find Factorial
+# 4. Find Square
+# 5. Exit
+# Each operation must be implemented using a separate function.
+
+# num = int(input("enter the number :"))
+# b = 0
+
+# print("1. check Even/Odd")
+# print("2. check prime")
+# print("3. Find Factorial")
+# print("4. Find square")
+# print ("press any key for Exit")
+
+# ch = int(input("enter the choice :"))
+
+
+
+
+# def check_even_odd(num):
+#     if num%2 == 0 :
+#         print("Even")
+#     else:
+#         print("Odd")
+
+# def check_prime(num):
+#     a = 0 
+#     if num <= 1:
+#         a=1
+        
+#     for i in range(2,num):
+#        a = 1
+#     if a == 1:
+#         print("Not prime")
+    
+#     if a == 0:
+#         print("prime")
+
+# def factorial(num):
+#     return num*factorial(num-1)
+# def square(num):
+#     return num*num 
+
+# if ch == 1:
+#     check_even_odd(num)
+# elif ch == 2:
+#     check_prime(num)
+# elif ch == 3:
+#     print(factorial(num))
+# elif ch == 4:
+#     print(square(num))
+# else:
+#     exit()
+
+# 25. Mini Project – Student Management
+# Organise a program using functions to:
+# Accept student name and marks
+# Calculate total
+# Calculate average
+# Determine grade
+# Display result
+# Condition: main() should control the complete program, while each individual task
+# should be performed by a separate function.
+
+# name  = " "
+# marks = []
+# num = int (input("enter the number of subject you want to enter the marks :"))
+
+
+# def insert():
+#     name = input ("enter the name :")
+#     for i in range (num):
+#         marks1 = int(input("enter the marks :"))
+#         if marks1 <0 or marks1 > 100:
+#             print("[ERROR] - The input marks is Invalid")
+#             marks1 = int(input("enter the marks :"))
+#         else:
+#             marks.append(marks1)
+#     return name
+
+# def calculate_total(marks):
+#     a=0
+#     for i in marks:
+#         a += i
+#     total =int(a) 
+#     return total
+
+
+# def calculate_average(marks,total,num):
+#     average = total / num 
+#     return average
+
+
+# def Determine_grade(average,marks,total,num):
+#     percentage = (total / (num*100))*100
+#     if percentage <=100 and percentage >= 90:
+#         print("grade = A")
+#     elif percentage <90 and percentage >=80:
+#         print("grade = B")
+#     elif percentage <80 and percentage >=70:
+#         print("grade = C")
+#     elif percentage <70 and percentage >= 60:
+#         print("grade = D")
+#     else:
+#         print("Fail")
+
+
+
+# def display_result(marks,name,total,average,num):
+
+#     print("-" * 60)
+#     print("Name    :", name)
+#     print("Marks   :", marks)
+#     print("Total   :", total)
+#     print("Average :", average)
+
+#     Determine_grade(average, marks, total, num)
+
+#     print("-" * 60)
+
+
+# def main():
+
+#     name = insert()
+
+#     total = calculate_total(marks)
+
+#     average = calculate_average(marks, total, num)
+
+#     display_result(marks, name, total, average, num)
+
+
+# main()
