@@ -27,11 +27,11 @@
 # for i in range(1,11):
 #     a = float(input("enter the value"))
  
-#     if (i>0):
+#     if (a>0):
 #         positive +=1
-#     elif (i<0):
+#     elif (a<0):
 #         negative +=1
-#     elif (i==0):
+#     elif (a==0):
 #         zero +=1
 #     else:
 #         print()
